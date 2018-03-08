@@ -1,0 +1,6 @@
+<ul class="cameras">
+  <button (click)="sort()">Sort A-Z</button>
+  <li *ngFor="let camera of cameras">
+      <span class="badge">{{camera.id}}</span> {{camera.name}}
+  </li>
+</ul>
