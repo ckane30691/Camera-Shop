@@ -28,7 +28,7 @@ export class CamerasComponent implements OnInit {
     }
   }
 
-  sortAtoZ(cameras): array {
+  sortAtoZ(cameras): Camera[] {
     if (cameras.length < 2) {
       return cameras;
     }
@@ -46,7 +46,7 @@ export class CamerasComponent implements OnInit {
     return (this.sortAtoZ(left).concat(pivot, this.sortAtoZ(right)))
   }
 
-  sortBySKU(cameras): array {
+  sortBySKU(cameras): Camera[] {
     if (cameras.length < 2) {
       return cameras;
     }

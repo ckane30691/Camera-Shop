@@ -32,7 +32,7 @@ export class CameraService {
   };
   /** GET camera by id. Will 404 if id not found */
   getCamera(id: number): Observable<Camera> {
-    const url = `${this.CamerasUrl}/${id}`;
+    const url = `${this.camerasUrl}/${id}`;
     return this.http.get<Camera>(url).pipe(
       tap(_ => console.log(`fetched camera id=${id}`)),
       catchError(this.handleError<Camera>(`getCamera id=${id}`))
