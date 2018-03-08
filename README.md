@@ -1,27 +1,25 @@
 # CameraShop
+![splash page](https://s3.amazonaws.com/camera-shop/Screen+Shot+2018-03-07+at+7.52.24+PM.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+[Live Site](https://camera-shop.herokuapp.com/)
 
-## Development server
+## Site Features:
+CameraShop is an Angular App that receives data via http and displays the results into a grid. It allows you to sort by name or SKU # and let's you search by product name.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Spotted a bug?
+If you find a bug, please open an issue [here](https://github.com/ckane30691/Camera-Shop/issues/new).
 
-## Code scaffolding
+## Technologies Used:
+* [Express](http://rubyonrails.org/) - Simple backend server to host files
+* [Angular](https://reactjs.org/) - JS library for building user interfaces
+* [RxJS](https://archive.codeplex.com/?p=rxjs) - library for transforming, composing, and querying streams of data.
+* [Angular in-memory-web-api](https://github.com/angular/in-memory-web-api) - An in-memory web api for Angular demos and tests that emulates CRUD operations over a RESTy API.
+* [TypeScript](https://www.typescriptlang.org) - Statically typed javascript
+* [Heroku](https://www.heroku.com) - Cloud platform that lets companies build, deliver, monitor and scale apps
+* [AWS S3 Buckets](https://aws.amazon.com/s3/) - Cloud Service for serving images
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Future Directions for CameraShop
+* Implement User Auth
+* Implement Checkouts
+* Implement Show Page for Cameras
+* Hit Amazon's Product API instead of serving static data from an endpoint
