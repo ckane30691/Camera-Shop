@@ -1,6 +1,8 @@
-<ul class="cameras">
-  <button (click)="sort()">Sort A-Z</button>
+<button class="sort-button" (click)="sort()">Sort A-Z</button>
+<button class="sort-button" (click)="sort('sku')">Sort by SKU</button>
+<ul class="camera-list">
   <li *ngFor="let camera of cameras">
-      <span class="badge">{{camera.id}}</span> {{camera.name}}
+      <span class="badge">{{camera.name}}</span> SKU: {{camera.id}}
+      <img class="camera-img" src="{{camera.url}}" alt="pic of {{camera.name}}">
   </li>
 </ul>

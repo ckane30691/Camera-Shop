@@ -1,13 +1,15 @@
 <div id="search-component">
-  <h4>Camera Search</h4>
 
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  🔎<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
 
-  <ul class="search-result">
-    <li *ngFor="let camera of cameras$ | async" >
+  <div class="search-card">
+    <ul class="camera-list">
+      <li *ngFor="let camera of cameras$ | async" >
 
-        {{camera.name}}
-    
-    </li>
-  </ul>
+        <span class="badge">{{camera.name}}</span> SKU: {{camera.id}}
+        <img class="camera-img" src="{{camera.url}}" alt="pic of {{camera.name}}">
+
+      </li>
+    </ul>
+  </div>
 </div>

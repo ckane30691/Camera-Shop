@@ -1,0 +1,59 @@
+.sort-button {
+  background-color: #369;
+  color: #fff;
+  width: 175px;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center;
+  padding: .9em .9em .9em .9em;
+  border-radius: 0.2em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  margin-right: 15px;
+  box-sizing: border-box;
+}
+
+.camera-list {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.camera-list li {
+  background-color: rgba(225, 225, 225, .8);
+  height: 320px;
+  width: 300px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 0.2em;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  position: relative;
+  color: #283c46;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.badge {
+  font-size: 1.2em;
+}
+
+.camera-img {
+  width: 250px;
+  height: 230px;
+  border-radius: 0.2em;
+}

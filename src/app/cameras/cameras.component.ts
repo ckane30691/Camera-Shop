@@ -20,8 +20,12 @@ export class CamerasComponent implements OnInit {
         .subscribe(cameras => this.cameras = cameras);
   }
 
-  sort(): void {
-    this.cameras = this.sortAtoZ(this.cameras);
+  sort(type): void {
+    if (type !== "sku") {
+      this.cameras = this.sortAtoZ(this.cameras);
+    } else {
+      this.cameras = this.sortBySKU(this.cameras);
+    }
   }
 
   sortAtoZ(cameras): array {
@@ -40,6 +44,24 @@ export class CamerasComponent implements OnInit {
     }
     // console.log(this.sortAtoZ(left).concat(pivot, this.sortAtoZ(right)))
     return (this.sortAtoZ(left).concat(pivot, this.sortAtoZ(right)))
+  }
+
+  sortBySKU(cameras): array {
+    if (cameras.length < 2) {
+      return cameras;
+    }
+    let pivot = cameras[0];
+    let left = [];
+    let right = [];
+    for (let i = 1; i < cameras.length; i++) {
+      if (pivot.id > cameras[i].id) {
+        left.push(cameras[i])
+      } else {
+        right.push(cameras[i])
+      }
+    }
+    // console.log(this.sortAtoZ(left).concat(pivot, this.sortAtoZ(right)))
+    return (this.sortBySKU(left).concat(pivot, this.sortBySKU(right)))
   }
 
 }
